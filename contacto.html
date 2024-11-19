@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Mon Amour Textil</title>
+    <title>Contacto - Distri Pou</title>
+    <meta name="description" content="Contáctanos para obtener más información sobre nuestros productos de blancos, indumentaria, calzado y ferretería en Villa del Dique.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#D4C098',
-                        secondary: '#EAE3C9',
-                        accent: '#C8C2AC',
-                        'primary-dark': '#A6A18F',
-                        cream: '#F3ECD0',
-                        ivory: '#FFFDF7'
+                        primary: '#FF4500',
+                        secondary: '#FF8C00',
+                        accent: '#FFD700',
+                        'primary-dark': '#CC3700',
+                        cream: '#FFF5E6',
+                        ivory: '#4A4A4A'
                     },
                     fontFamily: {
-                        'sans': ['Montserrat', 'sans-serif'],
-                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['Poppins', 'sans-serif'],
                     },
                 }
             }
@@ -36,7 +36,7 @@
             scrollbar-width: none;
         }
         .gradient-text {
-            background: linear-gradient(45deg, #D4C098, #EAE3C9);
+            background: linear-gradient(45deg, #FF4500, #FF8C00);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -63,25 +63,13 @@
             </button>
 
             <nav class="hidden lg:flex space-x-6">
-                <a href="#velas" class="text-sm font-medium hover:text-primary">VELAS</a>
-                <a href="#aromas" class="text-sm font-medium hover:text-primary">AROMAS</a>
-                <div class="relative group">
-                    <a href="#textiles" class="text-sm font-medium hover:text-primary flex items-center">
-                        TEXTILES
-                        <i class="fas fa-chevron-down ml-1 text-xs"></i>
-                    </a>
-                    <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-md mt-2">
-                        <a href="#cortinas-bano" class="block px-4 py-2 text-sm hover:bg-secondary">Cortinas de baño</a>
-                        <a href="#cortinas-interior" class="block px-4 py-2 text-sm hover:bg-secondary">Cortinas de interior</a>
-                        <a href="#cubre-sommier" class="block px-4 py-2 text-sm hover:bg-secondary">Cubre sommier</a>
-                        <a href="#accesorios" class="block px-4 py-2 text-sm hover:bg-secondary">Accesorios</a>
-                    </div>
-                </div>
-                <a href="#ceramica" class="text-sm font-medium hover:text-primary">CERÁMICA</a>
+                <a href="#blancos" class="text-sm font-medium hover:text-primary">BLANCOS</a>
+                <a href="#indumentaria-calzado" class="text-sm font-medium hover:text-primary">INDUMENTARIA Y CALZADO</a>
+                <a href="#ferreteria" class="text-sm font-medium hover:text-primary">FERRETERÍA</a>
             </nav>
 
             <a href="/" class="flex items-center justify-center flex-grow lg:flex-grow-0">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-iNVLMTwX3hsOUcQ8AicEBqjylwfiFJ.png" alt="Mon Amour Textil" class="h-20 w-auto">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-onkPf6w7xAJm0Pb3WSWudiUO5BoVQ2.png" alt="Distri Pou" class="h-20 w-auto">
             </a>
 
             <div class="flex items-center space-x-4">
@@ -97,7 +85,7 @@
     <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
         <div class="bg-white h-full w-64 p-4 transform transition-transform duration-300 ease-in-out">
             <div class="flex justify-between items-center mb-6">
-                <h2 class="text-xl font-serif">Menú</h2>
+                <h2 class="text-xl font-bold">Menú</h2>
                 <button id="closeMobileMenu">
                     <i class="fas fa-times h-5 w-5"></i>
                 </button>
@@ -113,21 +101,9 @@
                         <i class="fas fa-chevron-down accordion-icon transition-transform duration-300"></i>
                     </div>
                     <div class="accordion-content hidden mt-2 ml-4">
-                        <a href="#velas" class="block py-2 hover:text-primary">Velas</a>
-                        <a href="#aromas" class="block py-2 hover:text-primary">Aromas</a>
-                        <div class="accordion">
-                            <div class="accordion-header flex justify-between items-center cursor-pointer py-2">
-                                <span class="nav-link">Textiles</span>
-                                <i class="fas fa-chevron-down accordion-icon transition-transform duration-300"></i>
-                            </div>
-                            <div class="accordion-content hidden mt-2 ml-4">
-                                <a href="#cortinas-bano" class="block py-2 hover:text-primary">Cortinas de baño</a>
-                                <a href="#cortinas-interior" class="block py-2 hover:text-primary">Cortinas de interior</a>
-                                <a href="#cubre-sommier" class="block py-2 hover:text-primary">Cubre sommier</a>
-                                <a href="#accesorios" class="block py-2 hover:text-primary">Accesorios</a>
-                            </div>
-                        </div>
-                        <a href="#ceramica" class="block py-2 hover:text-primary">Cerámica</a>
+                        <a href="#blancos" class="block py-2 hover:text-primary">Blancos</a>
+                        <a href="#indumentaria-calzado" class="block py-2 hover:text-primary">Indumentaria y Calzado</a>
+                        <a href="#ferreteria" class="block py-2 hover:text-primary">Ferretería</a>
                     </div>
                 </div>
                 
@@ -139,16 +115,16 @@
     </div>
 
     <main class="flex-grow container mx-auto px-4 py-12">
-        <h1 class="text-4xl font-serif mb-8 gradient-text text-center">Contacto</h1>
+        <h1 class="text-4xl font-bold mb-8 text-primary text-center">Contacto</h1>
         
         <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <div class="space-y-8">
                 <div>
-                    <h2 class="text-2xl font-serif gradient-text mb-4">Información de Contacto</h2>
+                    <h2 class="text-2xl font-bold text-primary mb-4">Información de Contacto</h2>
                     <ul class="space-y-4">
                         <li class="flex items-center space-x-3">
                             <i class="fas fa-map-marker-alt text-primary w-6"></i>
-                            <span class="text-gray-600">Bell Ville, Argentina</span>
+                            <span class="text-gray-600">Villa del Dique, Córdoba, Argentina</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <i class="fas fa-phone text-primary w-6"></i>
@@ -156,7 +132,7 @@
                         </li>
                         <li class="flex items-center space-x-3">
                             <i class="fas fa-envelope text-primary w-6"></i>
-                            <span class="text-gray-600"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d3babdb5bc93beb2bdbcbebca6a1a7b6aba7babbfdb0bcbe">[email&#160;protected]</a></span>
+                            <span class="text-gray-600"><a href="mailto:info@distripou.com.ar">info@distripou.com.ar</a></span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <i class="fab fa-whatsapp text-primary w-6"></i>
@@ -166,7 +142,7 @@
                 </div>
 
                 <div>
-                    <h2 class="text-2xl font-serif gradient-text mb-4">Horario de Atención</h2>
+                    <h2 class="text-2xl font-bold text-primary mb-4">Horario de Atención</h2>
                     <ul class="space-y-2 text-gray-600">
                         <li>Lunes a Viernes: 9:00 - 18:00</li>
                         <li>Sábados: 9:00 - 13:00</li>
@@ -175,7 +151,7 @@
                 </div>
 
                 <div>
-                    <h2 class="text-2xl font-serif gradient-text mb-4">Síguenos en Redes</h2>
+                    <h2 class="text-2xl font-bold text-primary mb-4">Síguenos en Redes</h2>
                     <div class="flex space-x-4">
                         <a href="#" class="text-primary hover:text-primary-dark transition-colors">
                             <i class="fab fa-facebook text-2xl"></i>
@@ -191,7 +167,7 @@
             </div>
 
             <div class="bg-white rounded-lg p-6 shadow-md">
-                <h2 class="text-2xl font-serif gradient-text mb-6">Envíanos un Mensaje</h2>
+                <h2 class="text-2xl font-bold text-primary mb-6">Envíanos un Mensaje</h2>
                 <form class="space-y-4">
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
@@ -221,26 +197,25 @@
         <div class="container mx-auto px-4">
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                 <div>
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-iNVLMTwX3hsOUcQ8AicEBqjylwfiFJ.png" alt="Mon Amour Textil Logo" class="h-20 w-auto mb-4">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-onkPf6w7xAJm0Pb3WSWudiUO5BoVQ2.png" alt="Distri Pou Logo" class="h-20 w-auto mb-4">
                     <p class="text-sm text-gray-200">
-                        Textiles y decoración para tu hogar. Productos artesanales de alta calidad.
+                        Blancos, indumentaria, calzado y ferretería. Productos de calidad para tu hogar y trabajo.
                     </p>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4 font-serif">Enlaces rápidos</h3>
+                    <h3 class="text-lg font-semibold mb-4">Enlaces rápidos</h3>
                     <ul class="space-y-2">
-                        <li><a href="#velas" class="text-sm text-gray-200 hover:text-white transition-colors">Velas</a></li>
-                        <li><a href="#aromas" class="text-sm text-gray-200 hover:text-white transition-colors">Aromas</a></li>
-                        <li><a href="#textiles" class="text-sm text-gray-200 hover:text-white transition-colors">Textiles</a></li>
-                        <li><a href="#ceramica" class="text-sm text-gray-200 hover:text-white transition-colors">Cerámica</a></li>
+                        <li><a href="#blancos" class="text-sm text-gray-200 hover:text-white transition-colors">Blancos</a></li>
+                        <li><a href="#indumentaria-calzado" class="text-sm text-gray-200 hover:text-white transition-colors">Indumentaria y Calzado</a></li>
+                        <li><a href="#ferreteria" class="text-sm text-gray-200 hover:text-white transition-colors">Ferretería</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4 font-serif">Contacto</h3>
+                    <h3 class="text-lg font-semibold mb-4">Contacto</h3>
                     <ul class="space-y-2">
                         <li class="flex items-center text-sm text-gray-200">
                             <i class="fas fa-map-marker-alt mr-2 h-4 w-4"></i>
-                            Bell Ville, Argentina
+                            Villa del Dique, Córdoba, Argentina
                         </li>
                         <li class="flex items-center text-sm text-gray-200">
                             <i class="fas fa-phone mr-2 h-4 w-4"></i>
@@ -252,12 +227,12 @@
                         </li>
                         <li class="flex items-center text-sm text-gray-200">
                             <i class="fas fa-envelope mr-2 h-4 w-4"></i>
-                            <a href="/cdn-cgi/l/email-protection#d3babdb5bc93beb2bdbcbebca6a1a7b6aba7babbfdb0bcbe"><span class="__cf_email__" data-cfemail="d3babdb5bc93beb2bdbcbebca6a1a7b6aba7babbfdb0bcbe">[email&#160;protected]</span></a>
+                            <a href="mailto:info@distripou.com.ar">info@distripou.com.ar</a>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4 font-serif">Síguenos</h3>
+                    <h3 class="text-lg font-semibold mb-4">Síguenos</h3>
                     <div class="flex space-x-4 mb-4">
                         <a href="#" class="text-gray-200 hover:text-white transition-colors">
                             <i class="fab fa-facebook h-6 w-6"></i>
@@ -269,7 +244,7 @@
                             <i class="fab fa-pinterest h-6 w-6"></i>
                         </a>
                     </div>
-                    <h4 class="text-sm font-semibold mb-2 font-serif">Suscríbete a nuestro newsletter</h4>
+                    <h4 class="text-sm font-semibold mb-2">Suscríbete a nuestro newsletter</h4>
                     <form class="flex flex-col sm:flex-row gap-2">
                         <input type="email" placeholder="Tu email" class="flex-grow px-3 py-2 text-gray-900 rounded-md focus:outline-none">
                         <button type="submit" class="bg-white text-primary px-4 py-2 rounded-md hover:bg-gray-100 transition-colors">Suscribir</button>
@@ -277,7 +252,7 @@
                 </div>
             </div>
             <div class="mt-8 border-t border-gray-700 pt-8">
-                <h3 class="text-lg font-semibold mb-4 font-serif">Políticas</h3>
+                <h3 class="text-lg font-semibold mb-4">Políticas</h3>
                 <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
                     <li><a href="#" class="text-sm text-gray-200 hover:text-white transition-colors">Políticas de Privacidad y Cookies</a></li>
                     <li><a href="#" class="text-sm text-gray-200 hover:text-white transition-colors">Términos y Condiciones de Uso</a></li>
@@ -286,7 +261,7 @@
                 </ul>
             </div>
             <div class="mt-8 text-center text-sm text-gray-200">
-                <p>© 2024 Mon Amour Textil. Todos los derechos reservados.</p>
+                <p>© 2024 Distri Pou. Todos los derechos reservados.</p>
                 <p class="mt-2">Powered by <a href="https://dualitydomain.com" class="hover:text-white transition-colors">Duality Domain</a></p>
             </div>
         </div>
@@ -294,7 +269,7 @@
 
     <!-- WhatsApp Button and Notification -->
     <div class="fixed bottom-4 right-4 z-40">
-        <button id="whatsappButton" class="bg-[#25D366] hover:bg-[#20BA56] text-white rounded-full p-4 shadow-lg transition-colors">
+        <button id="whatsappButton" class="bg-[#25D366] hover:bg-[#20BA56] text-white rounded-full p-4 shadow-lg transition-colors" onclick="window.open('https://wa.me/5493534786106', '_blank')">
             <i class="fab fa-whatsapp h-6 w-6 whatsapp-logo"></i>
         </button>
         <div id="whatsappNotification" class="absolute bottom-full right-0 mb-2 bg-primary p-4 rounded-lg shadow-lg hidden w-64">
@@ -305,7 +280,6 @@
         </div>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
