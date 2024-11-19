@@ -102,6 +102,8 @@ function updateHero() {
 
 function renderProducts() {
     for (const [category, productList] of Object.entries(products)) {
+        console.log(`Rendering products for category: ${category}`);
+        console.log(`Number of products: ${productList.length}`);
         if (productContainers[category]) {
             productContainers[category].innerHTML = productList.map(product => `
                 <div class="product-card flex-shrink-0 w-64 bg-white rounded-lg shadow-md overflow-hidden">
@@ -117,6 +119,8 @@ function renderProducts() {
                     </div>
                 </div>
             `).join('');
+        } else {
+            console.warn(`Container for category ${category} not found`);
         }
     }
 }
@@ -469,6 +473,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(updateHero, 5000);
 
     renderProducts();
+    console.log("Products rendered");
 
     updateAdvertisingBanner();
     setInterval(updateAdvertisingBanner, 3600000); // Update every hour
