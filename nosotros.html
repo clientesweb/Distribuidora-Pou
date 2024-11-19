@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros - Mon Amour Textil</title>
+    <title>Nosotros - Distri Pou</title>
+    <meta name="description" content="Conoce más sobre Distri Pou, tu proveedor confiable de blancos, indumentaria, calzado y ferretería en Villa del Dique y alrededores.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -12,16 +13,15 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#D4C098',
-                        secondary: '#EAE3C9',
-                        accent: '#C8C2AC',
-                        'primary-dark': '#A6A18F',
-                        cream: '#F3ECD0',
-                        ivory: '#FFFDF7'
+                        primary: '#FF4500',
+                        secondary: '#FF8C00',
+                        accent: '#FFD700',
+                        'primary-dark': '#CC3700',
+                        cream: '#FFF5E6',
+                        ivory: '#4A4A4A'
                     },
                     fontFamily: {
-                        'sans': ['Montserrat', 'sans-serif'],
-                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['Poppins', 'sans-serif'],
                     },
                 }
             }
@@ -36,7 +36,7 @@
             scrollbar-width: none;
         }
         .gradient-text {
-            background: linear-gradient(45deg, #D4C098, #EAE3C9);
+            background: linear-gradient(45deg, #FF4500, #FF8C00);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -63,25 +63,13 @@
             </button>
 
             <nav class="hidden lg:flex space-x-6">
-                <a href="#velas" class="text-sm font-medium hover:text-primary">VELAS</a>
-                <a href="#aromas" class="text-sm font-medium hover:text-primary">AROMAS</a>
-                <div class="relative group">
-                    <a href="#textiles" class="text-sm font-medium hover:text-primary flex items-center">
-                        TEXTILES
-                        <i class="fas fa-chevron-down ml-1 text-xs"></i>
-                    </a>
-                    <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-md mt-2">
-                        <a href="#cortinas-bano" class="block px-4 py-2 text-sm hover:bg-secondary">Cortinas de baño</a>
-                        <a href="#cortinas-interior" class="block px-4 py-2 text-sm hover:bg-secondary">Cortinas de interior</a>
-                        <a href="#cubre-sommier" class="block px-4 py-2 text-sm hover:bg-secondary">Cubre sommier</a>
-                        <a href="#accesorios" class="block px-4 py-2 text-sm hover:bg-secondary">Accesorios</a>
-                    </div>
-                </div>
-                <a href="#ceramica" class="text-sm font-medium hover:text-primary">CERÁMICA</a>
+                <a href="#blancos" class="text-sm font-medium hover:text-primary">BLANCOS</a>
+                <a href="#indumentaria-calzado" class="text-sm font-medium hover:text-primary">INDUMENTARIA Y CALZADO</a>
+                <a href="#ferreteria" class="text-sm font-medium hover:text-primary">FERRETERÍA</a>
             </nav>
 
             <a href="/" class="flex items-center justify-center flex-grow lg:flex-grow-0">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-iNVLMTwX3hsOUcQ8AicEBqjylwfiFJ.png" alt="Mon Amour Textil" class="h-20 w-auto">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-onkPf6w7xAJm0Pb3WSWudiUO5BoVQ2.png" alt="Distri Pou" class="h-20 w-auto">
             </a>
 
             <div class="flex items-center space-x-4">
@@ -113,21 +101,10 @@
                         <i class="fas fa-chevron-down accordion-icon transition-transform duration-300"></i>
                     </div>
                     <div class="accordion-content hidden mt-2 ml-4">
-                        <a href="#velas" class="block py-2 hover:text-primary">Velas</a>
-                        <a href="#aromas" class="block py-2 hover:text-primary">Aromas</a>
-                        <div class="accordion">
-                            <div class="accordion-header flex justify-between items-center cursor-pointer py-2">
-                                <span class="nav-link">Textiles</span>
-                                <i class="fas fa-chevron-down accordion-icon transition-transform duration-300"></i>
-                            </div>
-                            <div class="accordion-content hidden mt-2 ml-4">
-                                <a href="#cortinas-bano" class="block py-2 hover:text-primary">Cortinas de baño</a>
-                                <a href="#cortinas-interior" class="block py-2 hover:text-primary">Cortinas de interior</a>
-                                <a href="#cubre-sommier" class="block py-2 hover:text-primary">Cubre sommier</a>
-                                <a href="#accesorios" class="block py-2 hover:text-primary">Accesorios</a>
-                            </div>
-                        </div>
-                        <a href="#ceramica" class="block py-2 hover:text-primary">Cerámica</a>
+                        <a href="#blancos" class="block py-2 hover:text-primary">Blancos</a>
+                        <a href="#indumentaria-calzado" class="block py-2 hover:text-primary">Indumentaria y Calzado</a>
+                        <a href="#ferreteria" class="block py-2 hover:text-primary">Ferretería</a>
+                        
                     </div>
                 </div>
                 
@@ -139,45 +116,45 @@
     </div>
 
     <main class="flex-grow container mx-auto px-4 py-12">
-        <h1 class="text-4xl font-serif mb-8 gradient-text text-center">Sobre Nosotros</h1>
+        <h1 class="text-4xl font-bold mb-8 text-primary text-center">Sobre Nosotros</h1>
         
         <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
             <div>
-                <img src="img/about-us.jpg" alt="Nuestro taller" class="rounded-lg shadow-lg">
+                <img src="img/about-us.jpg" alt="Nuestro local" class="rounded-lg shadow-lg">
             </div>
             <div class="space-y-6">
-                <h2 class="text-2xl font-serif gradient-text">Nuestra Historia</h2>
+                <h2 class="text-2xl font-bold text-primary">Nuestra Historia</h2>
                 <p class="text-gray-600">
-                    Mon Amour Textil nació de la pasión por crear espacios únicos y acogedores. Desde nuestros inicios en Bell Ville, nos hemos dedicado a seleccionar y crear productos que transforman casas en hogares.
+                    Distri Pou nació de la pasión por ofrecer productos de calidad para el hogar y el trabajo. Desde nuestros inicios en Villa del Dique, nos hemos dedicado a seleccionar y distribuir una amplia gama de productos que satisfacen las necesidades de nuestros clientes.
                 </p>
                 <p class="text-gray-600">
-                    Cada pieza en nuestra colección es elegida cuidadosamente, asegurando la más alta calidad y diseño. Trabajamos con artesanos locales y materiales sostenibles para crear productos que no solo son hermosos, sino también respetuosos con el medio ambiente.
+                    Cada artículo en nuestro catálogo es elegido cuidadosamente, asegurando la más alta calidad y funcionalidad. Trabajamos con proveedores confiables para ofrecer productos que no solo son útiles, sino también duraderos y accesibles.
                 </p>
             </div>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8 mb-12">
             <div class="text-center p-6 bg-white rounded-lg shadow-md">
-                <i class="fas fa-heart text-4xl gradient-text mb-4"></i>
-                <h3 class="text-xl font-serif mb-2">Pasión por el Diseño</h3>
-                <p class="text-gray-600">Creamos productos que combinan estética y funcionalidad.</p>
+                <i class="fas fa-box-open text-4xl text-primary mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Variedad de Productos</h3>
+                <p class="text-gray-600">Ofrecemos una amplia gama de productos para satisfacer diversas necesidades.</p>
             </div>
             <div class="text-center p-6 bg-white rounded-lg shadow-md">
-                <i class="fas fa-hand-holding-heart text-4xl gradient-text mb-4"></i>
-                <h3 class="text-xl font-serif mb-2">Calidad Artesanal</h3>
-                <p class="text-gray-600">Cada pieza es elaborada con atención al detalle.</p>
+                <i class="fas fa-truck text-4xl text-primary mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Envíos Rápidos</h3>
+                <p class="text-gray-600">Entregamos en Villa del Dique y alrededores de manera eficiente.</p>
             </div>
             <div class="text-center p-6 bg-white rounded-lg shadow-md">
-                <i class="fas fa-leaf text-4xl gradient-text mb-4"></i>
-                <h3 class="text-xl font-serif mb-2">Sostenibilidad</h3>
-                <p class="text-gray-600">Comprometidos con el medio ambiente y la producción responsable.</p>
+                <i class="fas fa-handshake text-4xl text-primary mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Atención Personalizada</h3>
+                <p class="text-gray-600">Brindamos un servicio al cliente excepcional y asesoramiento experto.</p>
             </div>
         </div>
 
         <div class="text-center max-w-2xl mx-auto">
-            <h2 class="text-2xl font-serif gradient-text mb-6">Nuestra Misión</h2>
+            <h2 class="text-2xl font-bold text-primary mb-6">Nuestra Misión</h2>
             <p class="text-gray-600 mb-8">
-                Buscamos transformar espacios y crear ambientes que inspiren y conecten con nuestros clientes, ofreciendo productos de alta calidad que perduren en el tiempo.
+                Buscamos ser el proveedor preferido de productos para el hogar y el trabajo en Villa del Dique y alrededores, ofreciendo calidad, variedad y un excelente servicio al cliente.
             </p>
             <a href="/contacto.html" class="inline-block bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-dark transition-colors">
                 Contáctanos
@@ -189,18 +166,17 @@
         <div class="container mx-auto px-4">
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                 <div>
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-iNVLMTwX3hsOUcQ8AicEBqjylwfiFJ.png" alt="Mon Amour Textil Logo" class="h-20 w-auto mb-4">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-onkPf6w7xAJm0Pb3WSWudiUO5BoVQ2.png" alt="Distri Pou Logo" class="h-20 w-auto mb-4">
                     <p class="text-sm text-gray-200">
-                        Textiles y decoración para tu hogar. Productos artesanales de alta calidad.
+                        Blancos, indumentaria, calzado y ferretería.  Productos de calidad para tu hogar y trabajo.
                     </p>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4 font-serif">Enlaces rápidos</h3>
                     <ul class="space-y-2">
-                        <li><a href="#velas" class="text-sm text-gray-200 hover:text-white transition-colors">Velas</a></li>
-                        <li><a href="#aromas" class="text-sm text-gray-200 hover:text-white transition-colors">Aromas</a></li>
-                        <li><a href="#textiles" class="text-sm text-gray-200 hover:text-white transition-colors">Textiles</a></li>
-                        <li><a href="#ceramica" class="text-sm text-gray-200 hover:text-white transition-colors">Cerámica</a></li>
+                        <li><a href="#blancos" class="text-sm text-gray-200 hover:text-white transition-colors">Blancos</a></li>
+                        <li><a href="#indumentaria-calzado" class="text-sm text-gray-200 hover:text-white transition-colors">Indumentaria y Calzado</a></li>
+                        <li><a href="#ferreteria" class="text-sm text-gray-200 hover:text-white transition-colors">Ferretería</a></li>
                     </ul>
                 </div>
                 <div>
@@ -208,7 +184,7 @@
                     <ul class="space-y-2">
                         <li class="flex items-center text-sm text-gray-200">
                             <i class="fas fa-map-marker-alt mr-2 h-4 w-4"></i>
-                            Bell Ville, Argentina
+                            Villa del Dique, Córdoba, Argentina
                         </li>
                         <li class="flex items-center text-sm text-gray-200">
                             <i class="fas fa-phone mr-2 h-4 w-4"></i>
@@ -220,7 +196,7 @@
                         </li>
                         <li class="flex items-center text-sm text-gray-200">
                             <i class="fas fa-envelope mr-2 h-4 w-4"></i>
-                            <a href="/cdn-cgi/l/email-protection#d3babdb5bc93beb2bdbcbebca6a1a7b6aba7babbfdb0bcbe"><span class="__cf_email__" data-cfemail="d3babdb5bc93beb2bdbcbebca6a1a7b6aba7babbfdb0bcbe">[email&#160;protected]</span></a>
+                            <a href="mailto:info@distripou.com.ar">[email protected]</a>
                         </li>
                     </ul>
                 </div>
@@ -254,7 +230,7 @@
                 </ul>
             </div>
             <div class="mt-8 text-center text-sm text-gray-200">
-                <p>© 2024 Mon Amour Textil. Todos los derechos reservados.</p>
+                <p>© 2024 Distri Pou. Todos los derechos reservados.</p>
                 <p class="mt-2">Powered by <a href="https://dualitydomain.com" class="hover:text-white transition-colors">Duality Domain</a></p>
             </div>
         </div>
