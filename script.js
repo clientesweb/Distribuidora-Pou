@@ -1,49 +1,66 @@
 // Data
 const products = {
-    velas: [
-        { id: 1, name: "Vitrè", price: 10700, image: "img/velas1.png", description: "Envase reutilizable de vidrio - 100 gr de cera de soja aromatizada" },
-        { id: 2, name: "Conques", price: 9800, image: "img/conques.jpg", description: "Envase reutilizable de vidrio con tapa - 70 gr de cera de soja aromatizada" },
-        { id: 3, name: "Dinan", price: 15600, image: "img/dinan.jpg", description: "Envase reutilizable de vidrio con tapa . 200 gr de cera de soja aromatizada" },
-        { id: 4, name: "Saignon", price: 53000, image: "img/saignon.jpg", description: "Velón suspendido en envase reutilizable de vidrio. 500 gr de cera de soja aromatizada" },
-        { id: 5, name: "Lottie pequeño", price: 6400, image: "img/lottie-pequeno.jpg", description: "Cuenco de 8cm de diámetro reutilizable de madera. 100 gr de cera de soja aromatizada" },
-        { id: 6, name: "Lottie mediano", price: 8400, image: "img/lottie-mediano.jpg", description: "Cuenco de 12 cm de diámetro reutilizable de madera . 200 gr de cera de soja aromatizada (doble pabilo)" },
-        { id: 7, name: "Jolie con flor", price: 7800, image: "img/jolie-con-flor.jpg", description: "Cuenco reutilizable de madera con 150gr. De cera de soja aromatizada" },
-        { id: 8, name: "Yanis pequeña x3", price: 7500, image: "img/yanis-pequena-x3.jpg", description: "Set de 3 velas Yanis pequeñas" },
-        { id: 9, name: "Teva x3", price: 10800, image: "img/teva-x3.jpg", description: "Set de 3 velas Teva" },
-        { id: 10, name: "Yanis grande", price: 5300, image: "img/yanis-grande.jpg", description: "Vela Yanis grande" },
-        { id: 11, name: "Bombones Marie", price: 2400, image: "img/bombones-marie.jpg", description: "5 mini bombones de cera de soja perfumados" },
-        { id: 12, name: "Sèlène x3", price: 11400, image: "img/selene-x3.jpg", description: "Set de 3 velas Sèlène" },
+    blancos: [
+        { id: 1, name: "Sábanas Dos Plaza y Media", price: 15000, image: "img/sabanas-dos-plaza-y-media.jpg", description: "Sábanas de alta calidad para cama dos plaza y media." },
+        { id: 2, name: "Sábanas Plaza y Media", price: 12000, image: "img/sabanas-plaza-y-media.jpg", description: "Sábanas disponibles en lisa o estampada para cama plaza y media." },
+        { id: 3, name: "Sábanas Ajustables Dos Plaza y Media", price: 13000, image: "img/sabanas-ajustables-dos-plaza-y-media.jpg", description: "Sábanas ajustables para cama dos plaza y media." },
+        { id: 4, name: "Sábanas Ajustables Plaza y Media", price: 11000, image: "img/sabanas-ajustables-plaza-y-media.jpg", description: "Sábanas ajustables para cama plaza y media." },
+        { id: 5, name: "Sábanas Ajustables Queen", price: 16000, image: "img/sabanas-ajustables-queen.jpg", description: "Sábanas ajustables para cama Queen size." },
+        { id: 6, name: "Sábanas Ajustables King", price: 18000, image: "img/sabanas-ajustables-king.jpg", description: "Sábanas ajustables para cama King size." },
+        { id: 7, name: "Almohadas", price: 5000, image: "img/almohadas.jpg", description: "Almohadas cómodas y duraderas." },
+        { id: 8, name: "Cubre Colchones Multiflex", price: 8000, image: "img/cubre-colchones-multiflex.jpg", description: "Cubre colchones Multiflex de alta calidad." },
+        { id: 9, name: "Cubre Cama de Verano", price: 9000, image: "img/cubre-cama-verano.jpg", description: "Cubre cama ligero ideal para el verano." },
+        { id: 10, name: "Acolchados de Invierno", price: 14000, image: "img/acolchados-invierno.jpg", description: "Acolchados cálidos para el invierno." },
+        { id: 11, name: "Juego de Toallones Domiciliarios", price: 7000, image: "img/toallones-domiciliarios.jpg", description: "Juego de toallones para uso domiciliario." },
+        { id: 12, name: "Juego de Toallones Hoteleros", price: 9000, image: "img/toallones-hoteleros.jpg", description: "Juego de toallones de calidad hotelera." },
+        { id: 13, name: "Toallas de Mano 50x86 cm", price: 3000, image: "img/toallas-mano.jpg", description: "Toallas de mano de 50x86 cm." },
+        { id: 14, name: "Mantas Playeras", price: 6000, image: "img/mantas-playeras.jpg", description: "Mantas ideales para la playa." },
+        { id: 15, name: "Alfombras", price: 8000, image: "img/alfombras.jpg", description: "Alfombras de diversos diseños y tamaños." },
+        { id: 16, name: "Manteles", price: 5000, image: "img/manteles.jpg", description: "Manteles para diferentes ocasiones." },
+        { id: 17, name: "Repasadores", price: 2000, image: "img/repasadores.jpg", description: "Repasadores absorbentes y duraderos." },
     ],
-    aromas: [
-        { id: 13, name: "Difusor de Aromas Floral", price: 3200, image: "https://images.unsplash.com/photo-1602178231289-a1e8e7f4c320?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80", description: "Difusor de aromas con esencia floral." },
-        { id: 14, name: "Aceite Esencial de Eucalipto", price: 1800, image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80", description: "Aceite esencial de eucalipto puro." },
-        { id: 15, name: "Spray Ambiental Cítrico", price: 1500, image: "https://images.unsplash.com/photo-1616011462185-0b493ddf0515?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80", description: "Spray ambiental con aroma cítrico refrescante." },
+    indumentariaYCalzado: [
+        { id: 18, name: "Camperas Cargo", price: 25000, image: "img/camperas-cargo.jpg", description: "Camperas cargo resistentes y funcionales." },
+        { id: 19, name: "Bermudas Cargo", price: 15000, image: "img/bermudas-cargo.jpg", description: "Bermudas cargo cómodas y versátiles." },
+        { id: 20, name: "Pantalones de Gabardina", price: 18000, image: "img/pantalones-gabardina.jpg", description: "Pantalones de gabardina de alta calidad." },
+        { id: 21, name: "Remeras", price: 8000, image: "img/remeras.jpg", description: "Remeras de diversos estilos y colores." },
+        { id: 22, name: "Shorts", price: 12000, image: "img/shorts.jpg", description: "Shorts cómodos para el verano." },
+        { id: 23, name: "Alpargatas", price: 6000, image: "img/alpargatas.jpg", description: "Alpargatas tradicionales y cómodas." },
+        { id: 24, name: "Ojotas", price: 4000, image: "img/ojotas.jpg", description: "Ojotas para la playa o el uso diario." },
+        { id: 25, name: "Zapatillas", price: 20000, image: "img/zapatillas.jpg", description: "Zapatillas deportivas y casuales." },
+        { id: 26, name: "Gomones", price: 30000, image: "img/gomones.jpg", description: "Gomones inflables para la playa o la piscina." },
     ],
-    textiles: [
-        { id: 16, name: "Cortina Burdeos", price: 75200, image: "img/cortina-burdeos.jpg", description: "Cortina de baño confeccionada en 100% algodón con volados y puntilla. Mide 180x180 cm. Lazos para atar al barral. No encogen: son lavadas antes y después de su confección. Se entregan planchadas y perfumadas listas para colgar." },
-        { id: 17, name: "Cortina Marsella", price: 60775, image: "img/cortina-marsella.jpg", description: "Cortina de baño confeccionada en 100% algodón con volados y puntilla. Mide 180x180 cm. Opcional: lazos para atar al barral u ojales para gancho. No encogen: son lavadas antes y después de su confección. Se entregan planchadas y perfumadas listas para colgar. No incluye protector." },
-        { id: 18, name: "Cortina Niza", price: 60775, image: "img/cortina-niza.jpg", description: "Cortina de baño confeccionada en 100% algodón con volados y puntilla. Mide 180x180 cm. Opcional: lazos para atar al barral u ojales para gancho. No encogen: son lavadas antes y después de su confección. Se entregan planchadas y perfumadas listas para colgar. No incluye protector." }
-    ],
-    ceramica: [
-        { id: 19, name: "Set de Mate Amelia", price: 30800, image: "img/set-mate-amelia.jpg", description: "Piezas de cerámica únicas realizadas y pintadas a mano. Incluye: mate, azucarera y plato de 22cm de diámetro." },
-        { id: 20, name: "Set Sophie", price: 24000, image: "img/set-sophie.jpg", description: "Piezas de cerámica únicas realizadas y pintadas a mano. Incluye: taza y plato corazón." },
-        { id: 21, name: "Fanal Lucia", price: 12000, image: "img/fanal-lucia.jpg", description: "Pieza de cerámica única realizada y pintada a mano. Incluye: fanal y plato." },
-        { id: 22, name: "Set Julieta", price: 19400, image: "img/set-julieta.jpg", description: "Piezas de cerámica únicas realizadas y pintadas a mano. Incluye: tazón y plato tostada." },
-        { id: 23, name: "Mini Florero Lea", price: 8000, image: "img/mini-florero-lea.jpg", description: "Pieza única de cerámica realizada y pintada a mano." },
-        { id: 24, name: "Florero Luisa (forma de nube)", price: 14000, image: "img/florero-luisa.jpg", description: "Pieza única de cerámica realizada y pintada a mano con forma de nube." },
+    ferreteria: [
+        { id: 27, name: "Baldes de Albañil", price: 3000, image: "img/baldes-albanil.jpg", description: "Baldes resistentes para albañilería." },
+        { id: 28, name: "Guantes Moteados", price: 1000, image: "img/guantes-moteados.jpg", description: "Guantes moteados para trabajo general." },
+        { id: 29, name: "Guantes de Baqueta", price: 2000, image: "img/guantes-baqueta.jpg", description: "Guantes de baqueta para trabajo pesado." },
+        { id: 30, name: "Guantes Baqueta Especial", price: 2500, image: "img/guantes-baqueta-especial.jpg", description: "Guantes de baqueta de calidad superior." },
+        { id: 31, name: "Guante Baqueta Naranja", price: 2200, image: "img/guante-baqueta-naranja.jpg", description: "Guantes de baqueta color naranja." },
+        { id: 32, name: "Guantes Antideslizantes Naranja", price: 1800, image: "img/guantes-antideslizantes-naranja.jpg", description: "Guantes antideslizantes color naranja." },
+        { id: 33, name: "Guantes Antideslizante Gris", price: 1800, image: "img/guantes-antideslizantes-gris.jpg", description: "Guantes antideslizantes color gris." },
+        { id: 34, name: "Guantes Soldador", price: 3000, image: "img/guantes-soldador.jpg", description: "Guantes especiales para soldadura." },
+        { id: 35, name: "Pala Ancha", price: 5000, image: "img/pala-ancha.jpg", description: "Pala ancha para jardinería y construcción." },
+        { id: 36, name: "Pala de Punta", price: 5000, image: "img/pala-punta.jpg", description: "Pala de punta para excavación." },
+        { id: 37, name: "Filtro de Goma Espuma", price: 500, image: "img/filtro-goma-espuma.jpg", description: "Filtro de goma espuma para diversos usos." },
+        { id: 38, name: "Tarugos N6", price: 100, image: "img/tarugos-n6.jpg", description: "Tarugos N6 para fijaciones." },
+        { id: 39, name: "Tarugos N8", price: 120, image: "img/tarugos-n8.jpg", description: "Tarugos N8 para fijaciones." },
+        { id: 40, name: "Tarugos N10", price: 150, image: "img/tarugos-n10.jpg", description: "Tarugos N10 para fijaciones." },
+        { id: 41, name: "Pantalón Cargo", price: 18000, image: "img/pantalon-cargo.jpg", description: "Pantalón cargo resistente para trabajo." },
+        { id: 42, name: "Borcegos de Seguridad", price: 25000, image: "img/borcegos-seguridad.jpg", description: "Borcegos de seguridad para trabajo pesado." },
+        { id: 43, name: "Zapatillas de Seguridad", price: 22000, image: "img/zapatillas-seguridad.jpg", description: "Zapatillas de seguridad cómodas y resistentes." },
     ],
 };
 
 const bannerMessages = [
-    "¡Nueva colección de textiles disponible!",
-    "Envíos gratis en compras superiores a $10000",
-    "¡Ofertas especiales en velas aromáticas!"
+    "¡Nueva colección de blancos disponible!",
+    "Envíos a todo Villa del Dique y alrededores",
+    "¡Ofertas especiales en ferretería!"
 ];
 
 const heroImages = [
-    "img/heroceramic.png",
-    "img/velashero.png",
-    "img/Cortinas.png"
+    "img/hero-blancos.jpg",
+    "img/hero-ferreteria.jpg",
+    "img/hero-indumentaria.jpg"
 ];
 
 // State
@@ -60,10 +77,9 @@ const cartItemsEl = document.getElementById('cartItems');
 const cartTotalEl = document.getElementById('cartTotal');
 const heroEl = document.querySelector('.hero-section');
 const productContainers = {
-    velas: document.getElementById('velasContainer'),
-    aromas: document.getElementById('aromasContainer'),
-    textiles: document.getElementById('textilesContainer'),
-    ceramica: document.getElementById('ceramicaContainer'),
+    blancos: document.getElementById('blancosContainer'),
+    indumentariaYCalzado: document.getElementById('indumentariaContainer'),
+    ferreteria: document.getElementById('ferreteriaContainer'),
 };
 
 // Functions
@@ -93,7 +109,7 @@ function renderProducts() {
                         <div class="relative mb-4 aspect-square">
                             <img src="${product.image}" alt="${product.name}" class="object-contain w-full h-full">
                         </div>
-                        <h3 class="text-sm font-medium line-clamp-2 font-serif">${product.name}</h3>
+                        <h3 class="text-sm font-medium line-clamp-2">${product.name}</h3>
                         <p class="mt-2 text-lg font-bold">$${product.price.toLocaleString()}</p>
                         <button class="w-full mt-2 bg-primary text-white py-2 px-4 rounded hover:bg-primary-dark transition-colors" onclick="openProductModal(${product.id}, '${category}')">
                             Ver detalles
@@ -183,7 +199,7 @@ function updateCartUI() {
             <div class="flex items-center space-x-4">
                 <img src="${item.image}" alt="${item.name}" class="w-12 h-12 object-contain">
                 <div>
-                    <p class="font-medium font-serif">${item.name}</p>
+                    <p class="font-medium">${item.name}</p>
                     <p class="text-sm text-gray-500">$${item.price.toLocaleString()} x ${item.quantity}</p>
                 </div>
             </div>
@@ -230,8 +246,8 @@ function calculateShipping(postalCode) {
                     name: "Retiro en local",
                     price: 0,
                     estimatedDelivery: 'Inmediato',
-                    logo: 'path/to/local-icon.png', // Reemplazar con la ruta correcta del ícono
-                    description: 'Tienda Mon Amour - Rivera Indarte 160, centro. Córdoba - Atención de lunes a viernes de 9 a 19 hs y sábados de 9 a 14 hs.'
+                    logo: 'path/to/local-icon.png',
+                    description: 'Distri Pou - Villa del Dique, Córdoba - Atención de lunes a viernes de 9 a 18 hs y sábados de 9 a 13 hs.'
                 }
             };
             resolve(shippingOptions);
@@ -278,14 +294,14 @@ function updateAdvertisingBanner() {
     let message, backgroundImage;
 
     if (currentHour >= 6 && currentHour < 12) {
-        message = "¡Oferta matutina! 15% de descuento en todas las velas aromáticas";
-        backgroundImage = "url('https://images.unsplash.com/photo-1602178231289-a1e8e7f4c320?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')";
+        message = "¡Oferta matutina! 15% de descuento en todos los blancos";
+        backgroundImage = "url('img/morning-banner.jpg')";
     } else if (currentHour >= 12 && currentHour < 18) {
-        message = "¡Especial de la tarde! Compra un textil y lleva el segundo a mitad de precio";
-        backgroundImage = "url('https://images.unsplash.com/photo-1584346133934-a3afd2a33c4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')";
+        message = "¡Especial de la tarde! Compra una indumentaria y lleva la segunda a mitad de precio";
+        backgroundImage = "url('img/afternoon-banner.jpg')";
     } else {
-        message = "¡Oferta nocturna! Envío gratis en compras superiores a $8000";
-        backgroundImage = "url('https://images.unsplash.com/photo-1616011462185-0b493ddf0515?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')";
+        message = "¡Oferta nocturna! Envío gratis en compras superiores a $20000";
+        backgroundImage = "url('img/night-banner.jpg')";
     }
 
     advertisingMessage.textContent = message;
@@ -361,7 +377,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('closeProductModal').addEventListener('click', closeProductModal);
 
     document.getElementById('whatsappButton').addEventListener('click', () => {
-        window.open('https://wa.me/5493534786106', '_blank');
+        window.open('https://wa.me/5491134386409', '_blank');
     });
 
     document.getElementById('closeWhatsappNotification').addEventListener('click', () => {
@@ -417,7 +433,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = new FormData(this);
         formData.append('cartItems', prepareCartData());
 
-        // Log de los datos que se están enviando
         console.log('Datos del formulario:', Object.fromEntries(formData));
 
         fetch(this.action, {
@@ -436,7 +451,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }).then(data => {
             console.log('Respuesta exitosa de Formspree:', data);
-            // Aquí llamamos a la función para iniciar el proceso de pago con Mercado Pago
             if (document.getElementById('paymentMethod').value === 'mercadopago') {
                 initiateMercadoPagoPayment();
             } else {
@@ -463,11 +477,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('whatsappNotification').classList.remove('hidden');
     }, 10000);
 
-    // Iniciar el slider automático para el banner de publicidad
     showAdSlide(currentAdSlide);
-    setInterval(nextAdSlide, 5000); // Cambiar cada 5 segundos
+    setInterval(nextAdSlide, 5000);
 
-    // Implementación del menú acordeón para dispositivos móviles
     const accordionHeaders = document.querySelectorAll('.accordion-header');
     
     accordionHeaders.forEach(header => {
@@ -480,7 +492,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Remove preloader
     document.getElementById('preloader').style.display = 'none';
 });
 
