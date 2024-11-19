@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Amour Textil - Decoración y Textiles de Hogar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D4C098',
+                        secondary: '#EAE3C9',
+                        accent: '#C8C2AC',
+                        'primary-dark': '#A6A18F',
+                        cream: '#F3ECD0',
+                        ivory: '#848071'
+                    },
+                    fontFamily: {
+                        'sans': ['Montserrat', 'sans-serif'],
+                        'serif': ['"Playfair Display"', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #D4C098;
+            border-right: 5px solid #EAE3C9;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .menu-icon {
+            transition: transform 0.3s ease;
+        }
+        .menu-icon.open {
+            transform: rotate(90deg);
+        }
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(212, 192, 152, 0.1);
+        }
+        .whatsapp-logo {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .product-slider {
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+        .hero-section {
+            width: 100%;
+            height: 1080px;
+            max-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 100vh;
+            }
+        }
+        .ad-slider {
+            overflow: hidden;
+        }
+        .ad-slide {
+            display: none;
+            animation: fadeInOut 5s ease-in-out infinite;
+        }
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            20%, 80% { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="flex min-h-screen flex-col font-sans bg-cream">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Top Banner -->
+    <div id="topBanner" class="bg-primary p-2 text-center text-white relative">
+        <p class="text-sm">
+            <span id="bannerMessage"></span>
+            <a href="#" class="underline">COMPRAR AHORA</a>
+        </p>
+        <button id="closeBanner" class="absolute right-2 top-2 text-white hover:bg-primary-dark p-1">
+            <i class="fas fa-times h-4 w-4"></i>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="border-b sticky top-0 bg-white z-50">
+        <div class="container mx-auto flex items-center justify-between px-4 py-4">
+            <button id="mobileMenuButton" class="text-gray-600 hover:text-primary lg:hidden">
+                <i class="fas fa-bars h-5 w-5 menu-icon"></i>
+            </button>
+
+            <nav class="hidden lg:flex space-x-6">
+                <a href="#velas" class="text-sm font-medium hover:text-primary">VELAS</a>
+                <a href="#aromas" class="text-sm font-medium hover:text-primary">AROMAS</a>
+                <div class="relative group">
+                    <a href="#textiles" class="text-sm font-medium hover:text-primary flex items-center">
+                        TEXTILES
+                        <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </a>
+                    <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-md mt-2">
+                        <a href="#cortinas-bano" class="block px-4 py-2 text-sm hover:bg-secondary">Cortinas de baño</a>
+                        <a href="#cortinas-interior" class="block px-4 py-2 text-sm hover:bg-secondary">Cortinas de interior</a>
+                        <a href="#cubre-sommier" class="block px-4 py-2 text-sm hover:bg-secondary">Cubre sommier</a>
+                        <a href="#accesorios" class="block px-4 py-2 text-sm hover:bg-secondary">Accesorios</a>
+                    </div>
+                </div>
+                <a href="#ceramica" class="text-sm font-medium hover:text-primary">CERÁMICA</a>
+            </nav>
+
+            <a href="/" class="flex items-center justify-center flex-grow lg:flex-grow-0">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-iNVLMTwX3hsOUcQ8AicEBqjylwfiFJ.png" alt="Mon Amour Textil" class="h-20 w-auto">
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <button id="cartButton" class="text-gray-600 hover:text-primary relative">
+                    <i class="fas fa-shopping-cart h-5 w-5"></i>
+                    <span id="cartItemCount" class="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-secondary text-xs text-white hidden"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="bg-white h-full w-64 p-4 transform transition-transform duration-300 ease-in-out">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl font-serif">Menú</h2>
+                <button id="closeMobileMenu">
+                    <i class="fas fa-times h-5 w-5"></i>
+                </button>
+            </div>
+            
+            <nav class="space-y-4">
+                <a href="/" class="block nav-link">Inicio</a>
+                
+                <!-- Mobile accordion menu -->
+                <div class="accordion">
+                    <div class="accordion-header flex justify-between items-center cursor-pointer">
+                        <span class="nav-link">Tienda</span>
+                        <i class="fas fa-chevron-down accordion-icon transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content hidden mt-2 ml-4">
+                        <a href="#velas" class="block py-2 hover:text-primary">Velas</a>
+                        <a href="#aromas" class="block py-2 hover:text-primary">Aromas</a>
+                        <div class="accordion">
+                            <div class="accordion-header flex justify-between items-center cursor-pointer py-2">
+                                <span class="nav-link">Textiles</span>
+                                <i class="fas fa-chevron-down accordion-icon transition-transform duration-300"></i>
+                            </div>
+                            <div class="accordion-content hidden mt-2 ml-4">
+                                <a href="#cortinas-bano" class="block py-2 hover:text-primary">Cortinas de baño</a>
+                                <a href="#cortinas-interior" class="block py-2 hover:text-primary">Cortinas de interior</a>
+                                <a href="#cubre-sommier" class="block py-2 hover:text-primary">Cubre sommier</a>
+                                <a href="#accesorios" class="block py-2 hover:text-primary">Accesorios</a>
+                            </div>
+                        </div>
+                        <a href="#ceramica" class="block py-2 hover:text-primary">Cerámica</a>
+                    </div>
+                </div>
+                
+                <a href="/nosotros.html" class="block nav-link">Nosotros</a>
+                <a href="/cambios-devoluciones.html" class="block nav-link">Cambios y devoluciones</a>
+                <a href="/contacto.html" class="block nav-link">Contacto</a>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Banner -->
+        <div class="hero-section">
+            <!-- Las imágenes se insertarán dinámicamente aquí -->
+        </div>
+
+        <!-- New Advertising Banner with Slider -->
+        <div class="bg-primary p-6 text-center text-white ad-slider">
+            <div class="ad-slide">
+                <h2 class="text-2xl font-bold mb-2 font-serif">¡Ofertas Especiales!</h2>
+                <p class="text-lg mb-2">Descubre nuestra nueva colección de textiles y decoración.</p>
+                <a href="#" class="inline-block bg-white text-primary font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition-colors">Ver Ofertas</a>
+            </div>
+            <div class="ad-slide">
+                <h2 class="text-2xl font-bold mb-2 font-serif">Envío Gratis</h2>
+                <p class="text-lg mb-2">En compras superiores a $10,000.</p>
+                <a href="#" class="inline-block bg-white text-primary font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition-colors">Comprar Ahora</a>
+            </div>
+            <div class="ad-slide">
+                <h2 class="text-2xl font-bold mb-2 font-serif">Nueva Colección</h2>
+                <p class="text-lg mb-2">Descubre nuestras últimas novedades en decoración.</p>
+                <a href="#" class="inline-block bg-white text-primary font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition-colors">Explorar</a>
+            </div>
+        </div>
+
+        <!-- Product Sections -->
+        <section id="velas" class="container mx-auto px-4 py-12">
+            <h2 class="mb-8 text-center text-2xl font-bold text-primary font-serif">VELAS</h2>
+            <div class="product-slider flex overflow-x-auto scrollbar-hide gap-6" id="velasContainer">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <section id="aromas" class="container mx-auto px-4 py-12">
+            <h2 class="mb-8 text-center text-2xl font-bold text-primary font-serif">AROMAS</h2>
+            <div class="product-slider flex overflow-x-auto scrollbar-hide gap-6" id="aromasContainer">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- New Advertising Banner -->
+        <div id="advertisingBanner" class="p-8 text-center relative" style="background-image: url('img/banner-bg.jpg'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <p id="advertisingMessage" class="text-3xl font-bold mb-4 relative z-10 text-white font-serif"></p>
+        </div>
+
+        <section id="textiles" class="container mx-auto px-4 py-12">
+            <h2 class="mb-8 text-center text-2xl font-bold text-primary font-serif">TEXTILES</h2>
+            <div class="product-slider flex overflow-x-auto scrollbar-hide gap-6" id="textilesContainer">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <section id="ceramica" class="container mx-auto px-4 py-12">
+            <h2 class="mb-8 text-center text-2xl font-bold text-primary font-serif">CERÁMICA</h2>
+            <div class="product-slider flex overflow-x-auto scrollbar-hide gap-6" id="ceramicaContainer">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Featured Collection Section -->
+        <section class="bg-gradient-to-r from-cream to-ivory py-16 mb-16">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-6">
+                        <h2 class="text-4xl font-bold text-gray-800 font-serif">¡NUEVA COLECCIÓN DE TEXTILES!</h2>
+                        <p class="text-xl text-gray-600">TENDENCIAS 2024</p>
+                    </div>
+                    <div class="relative">
+                        <img src="img/featured-collection.jpg" alt="Colección Destacada" class="w-full rounded-lg shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section with Icons -->
+        <section class="bg-white py-12 mb-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4">
+                            <i class="fas fa-truck text-4xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 font-serif">ENVÍO RÁPIDO</h3>
+                        <p class="text-gray-600">A toda Argentina</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-4xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 font-serif">COMPRA SEGURA</h3>
+                        <p class="text-gray-600">Garantía 100%</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4">
+                            <i class="fas fa-gift text-4xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 font-serif">PROMOCIONES</h3>
+                        <p class="text-gray-600">Aprovechá nuestras ofertas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                <div>
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-iNVLMTwX3hsOUcQ8AicEBqjylwfiFJ.png" alt="Mon Amour Textil Logo" class="h-20 w-auto mb-4">
+                    <p class="text-sm text-gray-200">
+                        Textiles y decoración para tu hogar. Productos artesanales de alta calidad.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 font-serif">Enlaces rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#velas" class="text-sm text-gray-200 hover:text-white transition-colors">Velas</a></li>
+                        <li><a href="#aromas" class="text-sm text-gray-200 hover:text-white transition-colors">Aromas</a></li>
+                        <li><a href="#textiles" class="text-sm text-gray-200 hover:text-white transition-colors">Textiles</a></li>
+                        <li><a href="#ceramica" class="text-sm text-gray-200 hover:text-white transition-colors">Cerámica</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 font-serif">Contacto</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-sm text-gray-200">
+                            <i class="fas fa-map-marker-alt mr-2 h-4 w-4"></i>
+                            Bell Ville, Argentina
+                        </li>
+                        <li class="flex items-center text-sm text-gray-200">
+                            <i class="fas fa-phone mr-2 h-4 w-4"></i>
+                            +54 9 353 478-6106
+                        </li>
+                        <li class="flex items-center text-sm text-gray-200">
+                            <i class="fab fa-whatsapp mr-2 h-4 w-4"></i>
+                            WhatsApp: +54 9 353 478-6106
+                        </li>
+                        <li class="flex items-center text-sm text-gray-200">
+                            <i class="fas fa-envelope mr-2 h-4 w-4"></i>
+                            <a href="/cdn-cgi/l/email-protection#b3daddd5dcf3dedcddd2dedcc6c1c7d6cbc7dadf9dd0dcde"><span class="__cf_email__" data-cfemail="4920272f26092426272824263c3b3d2c313d2025672a2624">[email&#160;protected]</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 font-serif">Síguenos</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-200 hover:text-white transition-colors">
+                            <i class="fab fa-facebook h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-200 hover:text-white transition-colors">
+                            <i class="fab fa-instagram h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-200 hover:text-white transition-colors">
+                            <i class="fab fa-pinterest h-6 w-6"></i>
+                        </a>
+                    </div>
+                    <h4 class="text-sm font-semibold mb-2 font-serif">Suscríbete a nuestro newsletter</h4>
+                    <form class="flex flex-col sm:flex-row gap-2">
+                        <input type="email" placeholder="Tu email" class="flex-grow px-3 py-2 text-gray-900 rounded-md focus:outline-none">
+                        <button type="submit" class="bg-white text-primary px-4 py-2 rounded-md hover:bg-gray-100 transition-colors">Suscribir</button>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8">
+                <h3 class="text-lg font-semibold mb-4 font-serif">Políticas</h3>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <li><a href="#" class="text-sm text-gray-200 hover:text-white transition-colors">Políticas de Privacidad y Cookies</a></li>
+                    <li><a href="#" class="text-sm text-gray-200 hover:text-white transition-colors">Términos y Condiciones de Uso</a></li>
+                    <li><a href="#" class="text-sm text-gray-200 hover:text-white transition-colors">Política de Garantía</a></li>
+                    <li><a href="#" class="text-sm text-gray-200 hover:text-white transition-colors">Políticas de Envío</a></li>
+                </ul>
+            </div>
+            <div class="mt-8 text-center text-sm text-gray-200">
+                <p>© 2024 Mon Amour Textil. Todos los derechos reservados.</p>
+                <p class="mt-2">Powered by <a href="https://dualitydomain.com" class="hover:text-white transition-colors">Duality Domain</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Checkout Form Modal -->
+<div id="checkoutModal" class="fixed inset-0 bg-gray-800 bg-opacity-75 z-50 hidden overflow-y-auto">
+    <div class="bg-white w-full max-w-md mx-auto mt-10 mb-10 p-6 rounded-lg">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold text-primary font-serif">Finalizar Compra</h2>
+            <button id="closeCheckoutModal" class="text-gray-600 hover:text-primary">
+                <i class="fas fa-times h-5 w-5"></i>
+            </button>
+        </div>
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-iNVLMTwX3hsOUcQ8AicEBqjylwfiFJ.png" alt="Mon Amour Textil Logo" class="h-20 w-auto mx-auto mb-4">
+        <form id="checkoutForm" class="space-y-4" action="https://formspree.io/f/mqaklprq" method="POST">
+            <!-- Contacto -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+            </div>
+
+            <!-- Opciones de envío -->
+            <div>
+                <h3 class="text-lg font-medium text-gray-700 mb-2 font-serif">Opciones de envío</h3>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Código postal</label>
+                    <input type="text" id="postalCode" name="postalCode" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+                </div>
+                <button type="button" id="searchShipping" class="mt-2 bg-secondary text-white py-2 px-4 rounded hover:bg-secondary-dark transition-colors">
+                    Buscar opciones de envío
+                </button>
+                <div id="shippingOptions" class="mt-2 hidden">
+                    <label class="block text-sm font-medium text-gray-700">Método de envío</label>
+                    <select id="shippingMethod" name="shippingMethod" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+                        <option value="">Seleccionar...</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Datos del destinatario -->
+            <div>
+                <h3 class="text-lg font-medium text-gray-700 mb-2 font-serif">Datos del destinatario</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Nombre</label>
+                        <input type="text" name="nombre" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Apellido</label>
+                        <input type="text" name="apellido" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <label class="block text-sm font-medium text-gray-700">DNI</label>
+                    <input type="text" name="dni" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+                </div>
+                <div class="mt-2">
+                    <label class="block text-sm font-medium text-gray-700">Teléfono</label>
+                    <input type="tel" name="telefono" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+                </div>
+            </div>
+
+            <!-- Domicilio del destinatario -->
+            <div>
+                <h3 class="text-lg font-medium text-gray-700 mb-2 font-serif">Domicilio del destinatario</h3>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Calle</label>
+                    <input type="text" name="calle" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+                </div>
+                <div class="mt-2">
+                    <label class="block text-sm font-medium text-gray-700">Número</label>
+                    <input type="text" name="numero" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+                </div>
+                <div class="mt-2">
+                    <label class="block text-sm font-medium text-gray-700">Piso (opcional)</label>
+                    <input type="text" name="piso" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+                </div>
+                <div class="mt-2">
+                    <label class="block text-sm font-medium text-gray-700">Dpto (opcional)</label>
+                    <input type="text" name="dpto" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+                </div>
+                <div class="mt-2">
+                    <label class="block text-sm font-medium text-gray-700">Ciudad</label>
+                    <input type="text" name="ciudad" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+                </div>
+                <div class="mt-2">
+                    <label class="block text-sm font-medium text-gray-700">Provincia</label>
+                    <input type="text" name="provincia" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+                </div>
+            </div>
+
+            <!-- Método de pago -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Método de pago</label>
+                <select id="paymentMethod" name="pago" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+                    <option value="">Seleccionar...</option>
+                    <option value="transferencia">Transferencia (20% de descuento)</option>
+                    <option value="mercadopago">MercadoPago</option>
+                </select>
+            </div>
+
+            <!-- Campo oculto para los datos del carrito -->
+            <input type="hidden" name="cartItems" id="cartItemsInput">
+
+            <div id="bankDetailsModal" class="hidden mt-4 p-4 border border-gray-300 rounded-lg">
+                <h4 class="font-bold mb-2">Datos bancarios para transferencia:</h4>
+                <p>Banco: [Nombre del Banco]</p>
+                <p>Titular: [Nombre del Titular]</p>
+                <p>CBU: [Número de CBU]</p>
+                <p>CUIT: [Número de CUIT]</p>
+                <p class="mt-2 font-bold">Total con 20% de descuento: $<span id="discountedTotal"></span></p>
+            </div>
+
+            <div id="mercadopago-button"></div>
+            <button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded hover:bg-primary-dark transition-colors">
+                Finalizar compra
+            </button>
+        </form>
+    </div>
+</div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="fixed inset-0 bg-gray-800 bg-opacity-75 z-50 hidden">
+        <div class="bg-white h-full w-full md:w-96 absolute right-0 p-4">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold text-primary font-serif">Carrito de Compras</h2>
+                <button id="closeCart" class="text-gray-600 hover:text-primary">
+                    <i class="fas fa-times h-5 w-5"></i>
+                </button>
+            </div>
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-iNVLMTwX3hsOUcQ8AicEBqjylwfiFJ.png" alt="Mon Amour Textil Logo" class="h-20 w-auto mx-auto mb-4">
+            <div id="cartItems" class="space-y-4">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            <div class="border-t pt-4 mt-4">
+                <p class="font-bold">Total: $<span id="cartTotal">0</span></p>
+            </div>
+            <button id="checkoutButton" class="w-full bg-primary text-white py-2 px-4 rounded mt-4 hover:bg-primary-dark">
+                Proceder al pago
+            </button>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="fixed inset-0 bg-gray-800 bg-opacity-75 z-50 hidden">
+        <div class="bg-white w-full max-w-md mx-auto mt-20 p-4 rounded-lg">
+            <div class="flex justify-between items-center mb-4">
+                <h2 id="productModalTitle" class="text-xl font-bold text-primary font-serif"></h2>
+                <button id="closeProductModal" class="text-gray-600 hover:text-primary">
+                    <i class="fas fa-times h-5 w-5"></i>
+                </button>
+            </div>
+            <div id="productModalContent">
+                <!-- Product details will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Button and Notification -->
+    <div class="fixed bottom-4 right-4 z-40">
+        <button id="whatsappButton" class="bg-[#25D366] hover:bg-[#20BA56] text-white rounded-full p-4 shadow-lg transition-colors">
+            <i class="fab fa-whatsapp h-6 w-6 whatsapp-logo"></i>
+        </button>
+        <div id="whatsappNotification" class="absolute bottom-full right-0 mb-2 bg-primary p-4 rounded-lg shadow-lg hidden w-64">
+            <p class="text-sm font-medium mb-2 text-white">¿Necesitas ayuda? ¡Contáctanos por WhatsApp!</p>
+            <button id="closeWhatsappNotification" class="text-sm text-white hover:text-gray-200 transition-colors">
+                Cerrar
+            </button>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script src="mercadopago.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
