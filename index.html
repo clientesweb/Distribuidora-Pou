@@ -140,9 +140,8 @@
 
             <nav class="hidden lg:flex space-x-6">
                 <a href="#blancos" class="text-sm font-medium hover:text-primary">BLANCOS</a>
+                <a href="#indumentaria-calzado" class="text-sm font-medium hover:text-primary">INDUMENTARIA Y CALZADO</a>
                 <a href="#ferreteria" class="text-sm font-medium hover:text-primary">FERRETERÍA</a>
-                <a href="#hoteleria" class="text-sm font-medium hover:text-primary">HOTELERÍA</a>
-                <a href="#accesorios" class="text-sm font-medium hover:text-primary">ACCESORIOS</a>
             </nav>
 
             <a href="/" class="flex items-center justify-center flex-grow lg:flex-grow-0">
@@ -179,9 +178,8 @@
                     </div>
                     <div class="accordion-content hidden mt-2 ml-4">
                         <a href="#blancos" class="block py-2 hover:text-primary">Blancos</a>
+                        <a href="#indumentaria-calzado" class="block py-2 hover:text-primary">Indumentaria y Calzado</a>
                         <a href="#ferreteria" class="block py-2 hover:text-primary">Ferretería</a>
-                        <a href="#hoteleria" class="block py-2 hover:text-primary">Hotelería</a>
-                        <a href="#accesorios" class="block py-2 hover:text-primary">Accesorios</a>
                     </div>
                 </div>
                 
@@ -212,15 +210,22 @@
             </div>
             <div class="ad-slide">
                 <h2 class="text-2xl font-bold mb-2">Nueva Colección</h2>
-                <p class="text-lg mb-2">Descubre nuestras últimas novedades en hotelería.</p>
+                <p class="text-lg mb-2">Descubre nuestras últimas novedades en indumentaria y calzado.</p>
                 <a href="#" class="inline-block bg-white text-primary font-bold py-2 px-4 rounded-full hover:bg-gray-100 transition-colors">Explorar</a>
             </div>
         </div>
 
-        <!-- Product Sections -->
+        <!-- Updated Product Sections -->
         <section id="blancos" class="container mx-auto px-4 py-12">
             <h2 class="mb-8 text-center text-2xl font-bold text-primary">BLANCOS</h2>
             <div class="product-slider flex overflow-x-auto scrollbar-hide gap-6" id="blancosContainer">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <section id="indumentaria-calzado" class="container mx-auto px-4 py-12">
+            <h2 class="mb-8 text-center text-2xl font-bold text-primary">INDUMENTARIA Y CALZADO</h2>
+            <div class="product-slider flex overflow-x-auto scrollbar-hide gap-6" id="indumentariaCalzadoContainer">
                 <!-- Products will be dynamically inserted here -->
             </div>
         </section>
@@ -237,20 +242,6 @@
             <div class="absolute inset-0 bg-black opacity-50"></div>
             <p id="advertisingMessage" class="text-3xl font-bold mb-4 relative z-10 text-white"></p>
         </div>
-
-        <section id="hoteleria" class="container mx-auto px-4 py-12">
-            <h2 class="mb-8 text-center text-2xl font-bold text-primary">HOTELERÍA</h2>
-            <div class="product-slider flex overflow-x-auto scrollbar-hide gap-6" id="hoteleriaContainer">
-                <!-- Products will be dynamically inserted here -->
-            </div>
-        </section>
-
-        <section id="accesorios" class="container mx-auto px-4 py-12">
-            <h2 class="mb-8 text-center text-2xl font-bold text-primary">ACCESORIOS</h2>
-            <div class="product-slider flex overflow-x-auto scrollbar-hide gap-6" id="accesoriosContainer">
-                <!-- Products will be dynamically inserted here -->
-            </div>
-        </section>
 
         <!-- Featured Collection Section -->
         <section class="bg-gradient-to-r from-cream to-ivory py-16 mb-16">
@@ -311,9 +302,8 @@
                     <h3 class="text-lg font-semibold mb-4">Enlaces rápidos</h3>
                     <ul class="space-y-2">
                         <li><a href="#blancos" class="text-sm text-gray-200 hover:text-white transition-colors">Blancos</a></li>
+                        <li><a href="#indumentaria-calzado" class="text-sm text-gray-200 hover:text-white transition-colors">Indumentaria y Calzado</a></li>
                         <li><a href="#ferreteria" class="text-sm text-gray-200 hover:text-white transition-colors">Ferretería</a></li>
-                        <li><a href="#hoteleria" class="text-sm text-gray-200 hover:text-white transition-colors">Hotelería</a></li>
-                        <li><a href="#accesorios" class="text-sm text-gray-200 hover:text-white transition-colors">Accesorios</a></li>
                     </ul>
                 </div>
                 <div>
@@ -333,7 +323,7 @@
                         </li>
                         <li class="flex items-center text-sm text-gray-200">
                             <i class="fas fa-envelope mr-2 h-4 w-4"></i>
-                            juanapou71@gmail.com
+                            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="513b24303f30213e24666011363c30383d7f323e3c">[email&#160;protected]</a>
                         </li>
                     </ul>
                 </div>
@@ -526,7 +516,7 @@
         </div>
     </div>
 
-    <!-- WhatsApp Button and Notification -->
+    <!-- Whats App Button and Notification -->
     <div class="fixed bottom-4 right-4 z-40">
         <button id="whatsappButton" class="bg-[#25D366] hover:bg-[#20BA56] text-white rounded-full p-4 shadow-lg transition-colors">
             <i class="fab fa-whatsapp h-6 w-6 whatsapp-logo"></i>
@@ -539,7 +529,7 @@
         </div>
     </div>
 
-    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://sdk.mercadopago.com/js/v2"></script>
     <script src="mercadopago.js"></script>
     <script src="script.js"></script>
 </body>
