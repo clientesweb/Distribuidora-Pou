@@ -78,7 +78,7 @@ const cartTotalEl = document.getElementById('cartTotal');
 const heroEl = document.querySelector('.hero-section');
 const productContainers = {
     blancos: document.getElementById('blancosContainer'),
-    indumentariaYCalzado: document.getElementById('indumentariaContainer'),
+    indumentariaYCalzado: document.getElementById('indumentariaCalzadoContainer'),
     ferreteria: document.getElementById('ferreteriaContainer'),
 };
 
